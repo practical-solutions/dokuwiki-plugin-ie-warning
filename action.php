@@ -27,10 +27,19 @@ class action_plugin_iewarning extends DokuWiki_Action_Plugin {
         
 	public function show_warning(Doku_Event $event, $param){
 		
-		#if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE || strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
-			echo "<div class='iewarning'><b>Achtung!</b> Sie benutzen den <i>veralteten</i> und <i>fehlerhaften</i> Internet Explorer. Nutzen Sie bitte einen anderen Browser (z.B. Firefox, Chrome), um diese Website sicher nutzen zu können.</div>";
-		#}
+		if ($this->getConf("logged_only") && !$this->logged()) return;
 		
+		if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE || strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
+			echo "<div class='iewarning'>".($this->getLang("warning"))."</div>";
+		}
+		
+	}
+
+	# User logged in
+	function logged(){
+		global $INFO;
+
+		return isset($INFO['userinfo']);
 	}
 	
 }
