@@ -4,4 +4,4 @@ email  practical@medizin-lernen.de
 date   2020-04-09
 name   IE - Warning
 desc   Show warning message when Internet Explorer ist used
-url    
+url    https://github.com/practical-solutions/dokuwiki-plugin-ie-warning
