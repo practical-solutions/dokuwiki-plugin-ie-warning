@@ -30,7 +30,7 @@ class action_plugin_iewarning extends DokuWiki_Action_Plugin {
 		if ($this->getConf("logged_only") && !$this->logged()) return;
 		
 		if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE || strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
-			echo "<div class='iewarning'>".($this->getLang("warning"))."</div>";
+			echo "<div class='iewarning'>".($this->getLang("warning"))."<br>".$this->getConf("message")."</div>";
 		}
 		
 	}

@@ -12,3 +12,9 @@ Option to show warning only to logged in users.
 The Internet Explorer ist still the standard and often only browser installed in many companies, resulting in a lot of problems. In dokuwiki
 many important plugins fail in the Internet Explorer, e.g. CKGEditor, draw.io, etc. Thus a simple warning message ist essential, especially
 for editors lacking advanced technical knowledge.
+
+## Compatibility
+
+Tested with
+* DokuWiki / **Hogfather**
+* PHP **7.3**
