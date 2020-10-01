@@ -5,7 +5,9 @@ options / programming use the existing [NoIEWarning-Plugin](https://www.dokuwiki
 
 ## Options
 
-Option to show warning only to logged in users.
+  * Option to show warning only to logged in users.
+  * Additional message text
+  * Additional CSS for the message box
 
 ## Why another IE Warning Plugin?
 
